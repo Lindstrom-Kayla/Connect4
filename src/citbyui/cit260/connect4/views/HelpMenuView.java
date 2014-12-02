@@ -7,7 +7,7 @@ package citbyui.cit260.connect4.views;
 import citbyui.cit260.connect4.models.Connect4Error;
 import citbyui.cit260.connect4.control.HelpMenuControl;
 import java.util.Scanner;
-
+import citbyui.cit260.connect4.enums.Instructions;
 
 
 /**
@@ -32,7 +32,7 @@ public class HelpMenuView {
     } 
     
     // display the help menu and get the end users input selection
-    public void getInput() {       
+    public void getInput(Instructions instructions) {       
               
         String command;
         Scanner inFile = new Scanner(System.in);
@@ -47,7 +47,7 @@ public class HelpMenuView {
             
             switch (command) {
                 case "I":
-                    this.helpMenuControl.displayInstructionHelp();
+                    System.out.println(instructions);
                     break;
                 case "T":
                     this.helpMenuControl.displayTipsHelp();
@@ -73,5 +73,7 @@ public class HelpMenuView {
         }
         System.out.println("\t===============================================================\n");
     }
+
+    
   
 }

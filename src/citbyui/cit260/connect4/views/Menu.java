@@ -18,6 +18,9 @@ public class Menu implements DisplayInfo {
     
     public Menu(){}
 
+    /**
+     *
+     */
     @Override
     public void display () {
         
@@ -28,4 +31,10 @@ public class Menu implements DisplayInfo {
         this();
         this.menuItems = menuItems;
     }
+
+    @Override
+    public void displayError() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+}
