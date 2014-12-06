@@ -21,7 +21,7 @@ public class Game {
         
     }
     
-    public void TwoPlayerGame(){
+    public void TwoPlayerGame() throws Throwable{
         PlayerName name = new PlayerName();
         Players = name.getNames();
     }

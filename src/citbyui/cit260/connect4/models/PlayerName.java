@@ -8,6 +8,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Objects;
 import citbyui.cit260.connect4.interfaces.EnterInfo;
+import citbyui.cit260.connect4.exceptions.PlayerException;
 /**
  *
  * @author Kayla Lindstrom,Faron Young, Loren Glenn, Joshua Siqueiros, Sarah Christian, Patti Jones
@@ -34,13 +35,13 @@ public class PlayerName{
         return PlayerName;
     }
     
-    public String[] getNames(){
+    public String[] getNames() throws Throwable {
         
         String playerOne = "";
         String playerTwo = ""; 
-        
-    
         Scanner inFile = new Scanner(System.in);
+    try {
+        
         
         System.out.println("Player one please enter your name: ");
         playerOne = inFile.nextLine();
@@ -61,9 +62,13 @@ public class PlayerName{
             }
         }
         return PlayerName;
+        }
+    catch (Throwable PlayerException) {
+            System.out.println(PlayerException.getMessage());
+        }
+     finally {
+                inFile.close();   }
+        return null;
+       
     }
 }
-            
-      
-
-

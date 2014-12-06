@@ -27,8 +27,8 @@ public class Connect4 {
         Connect4 connect4 = new Connect4();
         try {
             main.getInput();
-        } catch (Throwable ex) {
-            System.out.println(ex.getMessage());
+        } catch (Throwable Connect4Exception) {
+            System.out.println(Connect4Exception.getMessage());
         }
         finally {
             Connect4.inFile.close();
